@@ -7,7 +7,7 @@
     <div class="form-group">
         <label for="newBurger">Type name of burger</label>
         <textarea class="form-control" id="newBurger" rows="3"></textarea>
-        <button type="submit" class="btn btn-success" id="addNewBurger"></button>
+        <button type="submit" class="btn btn-info" id="addNewBurger">Submit</button>
     </div>
     <div class="row">
         <div class="col-6">
@@ -34,7 +34,6 @@
                         {{#each burgers}}
                             {{#if devoured}}
                                 <span><strong> {{this.id}} - {{this.burger_name}} </strong></span>
-                                <!--<button type="button" class="deleteBurger btn btn-danger" id ="deleteButton" data-id="{{this.id}}" data-newDevoured="{{devour}}">Delete</button>-->
                                 <hr>
                             {{/if}}
                         {{/each}}
