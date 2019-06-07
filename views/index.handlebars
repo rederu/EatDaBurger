@@ -12,34 +12,45 @@
     <div class="row">
         <div class="col-6">
             <div class="card">
-                <h5 class="card-header text-white">Available Burgers</h5>
+                <h5 class="card-header">Available Burgers</h5>
                 <div class="card-body">
-                    <ul>
-                        {{#each burgers}}
-                            {{#unless devoured}}
-                                <span><strong> {{this.id}} - {{this.burger_name}} </strong></span>
-                                <button type="button" class="devourBurger btn btn-info" id ="devourButton" data-id="{{this.id}}" data-newDevoured="{{devour}}">Devour</button>
-                                <hr>
-                            {{/unless}}
-                        {{/each}}
-                    </ul>
+
+
+                    {{#each burgers}}
+                    {{#unless devoured}}
+                    <div class="row">
+                        <div class="col-9">
+                            <span>{{this.id}} ~ {{this.burger_name}}</span>
+                        </div>
+                        <div class="col-3">
+                            <button type="button" class="devourBurger btn btn-info" id="devourButton"
+                                data-id="{{this.id}}" data-newDevoured="{{devour}}">Devour</button>
+                        </div>
+                    </div>
+                    <hr>
+                    {{/unless}}
+                    {{/each}}
+
                 </div>
             </div>
         </div>
         <div class="col-6">
             <div class="card">
-                <h5 class="card-header text-white">Devoured Burgers</h5>
+                <h5 class="card-header">Devoured Burgers</h5>
                 <div class="card-body">
-                    <ul>
-                        {{#each burgers}}
-                            {{#if devoured}}
-                                <span><strong> {{this.id}} - {{this.burger_name}} </strong></span>
-                                <hr>
-                            {{/if}}
-                        {{/each}}
-                    </ul>
+                    {{#each burgers}}
+                    {{#if devoured}}
+                    <div class="row">
+                        <div class="col-12">
+                            <span> {{this.id}} ~ {{this.burger_name}}</span>
+                        </div>
+                    </div>
+                    <hr>
+                    {{/if}}
+                    {{/each}}
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>
