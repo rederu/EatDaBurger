@@ -7,25 +7,25 @@ var burger = require("../models/burger.js")
 //Routes
 //Create routes
 router.get("/", function (req, res) {
-	cat.all(function (data) {
-		var hbsObject = {
-			burgers: data
-		};
-		console.log(hbsObject);
-		res.render("index", hbsObject);
-	});
+    cat.all(function (data) {
+        var hbsObject = {
+            burgers: data
+        };
+        console.log(hbsObject);
+        res.render("index", hbsObject);
+    });
 });
 
 //Add new burger
 router.post("/api/burger", function (req, res) {
-	burger.insertOne([
-		"name", "devoured"
-	], [
-			req.body.burger_name, req.body.devoured
-		], function (result) {
-			// Send back the ID of the new quote
-			res.json({ id: result.insertId });
-		});
+    burger.insertOne([
+        "name", "devoured"
+    ], [
+            req.body.burger_name, req.body.devoured
+        ], function (result) {
+            // Send back the ID of the new burger
+            res.json({ id: result.insertId });
+        });
 });
 
 

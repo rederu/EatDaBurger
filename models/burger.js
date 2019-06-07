@@ -18,7 +18,7 @@ var burger ={
 		orm.insertOne("burgers", objColVals, condition, function (res) {
 			cb(res);
 		});
-	},
+	}
 };//End burger
 
 //Export module burger
