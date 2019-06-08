@@ -49,3 +49,7 @@ p{
     font-size: 1.05rem;
 }
 
+.card-header{
+    background-color: rgb(243, 174, 46);
+    color: whitesmoke;
+}
