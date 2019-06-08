@@ -1,17 +1,24 @@
-<div class="container">
+<div class="bg">
     <div class="jumbotron-fluid">
-        <h1>Eat That Burger!</h1>
-        <p>Create your burger and devour it!</p>
+        <div class="row">
+            <div class="col-6 title">
+                <h1>Eat That Burger!</h1>
+                <p>Create your burger and devour it!</p>
+            </div>
+            
+        </div>
     </div>
+</div>
+<div class="container">
     <form class="create-form">
         <div class="form-group">
-            <label for="newBurger">Type name of burger</label>
-            <textarea class="form-control" id="newBurger" rows="1"></textarea>
-            <button type="submit" class="btn btn-info" id="addNewBurger">Submit</button>
+            <label for="newBurger"></label>
+            <textarea class="form-control" id="newBurger" rows="1" placeholder="Name of your burger"></textarea>
+            <button type="submit" class="btn btn-danger" id="addNewBurger">Submit</button>
         </div>
     </form>
     <div class="row">
-        <div class="col-6">
+        <div class="col-7">
             <div class="card">
                 <h5 class="card-header">Available Burgers</h5>
                 <div class="card-body">
@@ -21,11 +28,11 @@
                     {{#unless devoured}}
                     <div class="row">
                         <div class="col-9">
-                            <span>{{this.id}} ~ {{this.burger_name}}</span>
+                            <span class="available">{{this.id}} ~ {{this.burger_name}}</span>
                         </div>
                         <div class="col-3">
-                            <button type="button" class="devourBurger btn btn-info" id="devourButton"
-                                data-id="{{this.id}}" data-newDevoured="{{devour}}">Devour</button>
+                            <button type="button" class="devourBurger btn btn-danger" id="devourButton"
+                                data-id="{{this.id}}" data-newDevoured="{{devour}}">Devour It!</button>
                         </div>
                     </div>
                     <hr>
@@ -35,7 +42,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-6">
+        <div class="col-5">
             <div class="card">
                 <h5 class="card-header">Devoured Burgers</h5>
                 <div class="card-body">
@@ -43,7 +50,7 @@
                     {{#if devoured}}
                     <div class="row">
                         <div class="col-12">
-                            <span> {{this.id}} ~ {{this.burger_name}}</span>
+                            <span class="eaten"> ~ {{this.burger_name}}</span>
                         </div>
                     </div>
                     <hr>
