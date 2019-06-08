@@ -21,9 +21,12 @@ $(function () {
     //Submit new burger
     $(".create-form").on("submit", function (event) {
         event.preventDefault();
-
+        var burgerName = $("#newBurger").val().trim();
+        if(burgerName ===""){
+            alert("Please write a name for your burger.");
+        }else{
         var newBurger = {
-            burger_name: $("#newBurger").val().trim(),
+            burger_name: burgerName,
             devoured: 0
         };
 
@@ -36,7 +39,7 @@ $(function () {
             location.reload();
         })
 
-
+    }
     });//End create new burger
 
 });//End main 
