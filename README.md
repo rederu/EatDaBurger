@@ -11,15 +11,14 @@ When the user clicks  on the Devour it! button, the burger will mode to the righ
 <img src="https://i.imgur.com/GJ3Mpn4.png">
 
 ### Technology used in Eat-Da-Burger
-<ul>
-  <li>HTML</li>
-  <li>CSS</li>
-  <li>Bootstrap</li>
-  <li>MySQL</li>
-  <li>Node</li>
-  <li>Express</li>
-  <li>Handlebars</li>
-</ul>
+
+* HTML
+* CSS
+* Bootstrap
+* MySQL
+* Node
+* Express
+* Handlebars
 
 ## How to use it
 
