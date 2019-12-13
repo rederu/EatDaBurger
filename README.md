@@ -8,7 +8,18 @@ Eat-Da-Burger is a burger-logger application powered by MySQL, Node, Express, an
 
 When the user clicks  on the Devour it! button, the burger will mode to the right side of the page, right to the "Devoured Burgers" section.
 
+<img src="https://i.imgur.com/GJ3Mpn4.png">
 
+### Technology used in Eat-Da-Burger
+<ul>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>Bootstrap</li>
+  <li>MySQL</li>
+  <li>Node</li>
+  <li>Express</li>
+  <li>Handlebars</li>
+</ul>
 
 ## How to use it
 
@@ -25,3 +36,4 @@ To use Eat-Da-Burger from your desktop you  need to:
 * Access to the repository's directory from terminal and install the required NPM packages (npm install). 
 * With the help of the file schema.sql you need to create the MySQL database and its table.
 * After that you need to stat the application server (node server). Type localhost:8080 in your browser's URL bar.
+
